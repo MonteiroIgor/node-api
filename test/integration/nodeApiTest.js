@@ -10,7 +10,7 @@ chai.should();
 describe('Product - Endpoints', () => {
     describe('POST /api/products', () => {
         it ('deve retornar usuário criado - 200', done => {
-          chai.request('http://localhost:3001')
+          chai.request(urlBase)
             .post('/api/products')
             .send(CADASTRO_USUARIO)
             .end((err, res) => {
